@@ -1,0 +1,21 @@
+[project]
+name = "show-joserfc-issue"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Dino Hensen", email = "dino.hensen@gmail.com"},
+]
+dependencies = ["boto3-stubs[cognito-idp]>=1.35.70", "boto3>=1.35.70"]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "moto[cognito-idp]>=5.0.21",
+]
